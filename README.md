@@ -1,72 +1,72 @@
-<<<<<<< HEAD
 # SecureSight-Dashboard
-=======
 
-# SecureSight Dashboard
-
-SecureSight Dashboard is a fullstack surveillance camera dashboard project built using React (frontend), Flask (backend), and MySQL (database) with Docker support.
-
-## 🔧 Features
-- Live surveillance dashboard UI
-- RESTful backend API using Flask
-- MySQL database connectivity
-- Docker and Docker Compose setup
-- Scalable project structure
-
-## 🐳 Docker Setup
-
-### 1. Start MySQL and Frontend
-```bash
-docker compose up -d
-```
-
-### 2. Run Backend
-```bash
-cd backend
-docker build -t securesight-backend .
-docker run -p 5000:5000 securesight-backend
-```
-
-## 🧱 MySQL Database Setup
-
-Run this SQL script inside your MySQL container or connected DB:
-
-```sql
-CREATE DATABASE securesight;
-
-USE securesight;
-
-CREATE TABLE camera_logs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-    location VARCHAR(255),
-    activity_detected TEXT
-);
-```
-
-## 🖼️ Screenshots
-
-| Login UI         | Dashboard UI     |
-|------------------|------------------|
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) |
+SecureSight is a secure, role-based dashboard system built using Spring Boot (backend), React (frontend), and MySQL (database). It enables user management, authentication, and secure access to dashboard content.
 
 ---
 
-## 📁 Folder Structure
-```
-SecureSight-Dashboard/
-├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── db_schema.sql
-├── frontend/
-│   ├── public/
-│   └── src/
-├── docker-compose.yml
-├── README.md
-```
+## 🚀 Live Project (Local)
 
-## 🤝 Author
-Mohammed Afsar K A  
-GitHub: https://github.com/mohdafsar313  
->>>>>>> 11f18f0 (Initial commit - SecureSight Dashboard submission)
+- 🔗 **Frontend (React)**: [http://localhost:3000](http://localhost:3000)
+- 🔗 **Backend API (Spring Boot)**: [http://localhost:8080/api](http://localhost:8080/api)
+- 🔗 **MySQL Database**: Running in Docker container on port `3306`
+
+---
+
+## 📦 Project Structure
+
+SecureSight-Dashboard/
+│
+├── backend/ # Spring Boot REST API
+├── frontend/ # React dashboard UI
+├── mysql/ # Init scripts and Docker volume setup
+├── docker-compose.yml
+└── README.md
+
+
+---
+
+## 🐳 Docker Deployment (Local)
+
+### Step 1: Clone the repository
+
+```bash
+git clone https://github.com/mohdafsar313/SecureSight-Dashboard.git
+cd SecureSight-Dashboard
+docker-compose up --build
+
+Step 3: Access the services
+Frontend: http://localhost:3000
+
+Backend: http://localhost:8080/api
+
+MySQL: port 3306 (access via tools like MySQL Workbench or DBeaver)
+
+🧪 Features
+✅ Role-based authentication
+
+✅ Secure login system
+
+✅ Admin & User views
+
+✅ RESTful API using Spring Boot
+
+✅ Responsive dashboard UI with React
+
+✅ Dockerized with docker-compose
+
+📤 Future Deployment (Cloud)
+Coming soon (optional):
+
+🔹 Frontend on Vercel / Netlify
+
+🔹 Backend on Render / Railway
+
+🔹 DB on PlanetScale / Neon
+
+🤝 Author
+Mohammed Afsar K A
+
+📄 License
+This project is for educational and assessment submission purposes. All rights reserved.
+---
+Let me know if you want a version that includes deployment to Vercel or Render.
